@@ -1,0 +1,99 @@
+<header>
+  <div class="menu-container">
+    <hamburger-menu
+      data-links='{{ partial "functions/menu-to-json.html" . }}'
+    ></hamburger-menu>
+  </div>
+  <script
+    src="/js/components/hamburgerMenu_v02/hamburgerRoot.js"
+    type="module"
+  ></script>
+
+  <nav class="site-nav-container">
+    <a
+      class="site-link"
+      hx-get="/"
+      hx-on::after-request="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      HOME
+    </a>
+    <a
+      class="site-link"
+      hx-get="/about"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/about"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      ABOUT
+    </a>
+    <a
+      class="site-link"
+      hx-get="/blog"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/blog"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      BLOG
+    </a>
+    <a
+      class="site-link"
+      hx-get="/projects"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/projects"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      PROJECTS
+    </a>
+    <a
+      class="site-link"
+      hx-get="/contact"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/contact"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      CONTACT
+    </a>
+  </nav>
+  <div class="flex-row">
+    <button class="">
+      <a href="https://github.com/Rococcoon" target="_blank" rel="noopener">
+        <icon-theme-aware
+          data-name="git-hub"
+          data-src-light="/icons/github/github-mark-dark.png"
+          data-src-dark="/icons/github/github-mark-light.png"
+          data-height="20"
+          data-width="20"
+        ></icon-theme-aware>
+      </a>
+    </button>
+    <button>
+      <toggle-theme-v02></toggle-theme-v02>
+    </button>
+  </div>
+  <script
+    src="/js/components/toggleTheme_v02/toggleTheme.js"
+    type="module"
+  ></script>
+</header>

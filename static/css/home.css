@@ -1,0 +1,18 @@
+@layer page {
+  .title-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-header {
+    font-size: var(--text-4xl);
+    padding: var(--p-none);
+  }
+}
+
+@media (width > 640px) {
+  .title-header {
+    font-size: var(--text-6xl);
+  }
+}

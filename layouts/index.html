@@ -1,0 +1,16 @@
+{{ define "main" }}
+<script src="/js/components/spinnerHex/spinnerHex.js" type="module"></script>
+<script src="/js/components/contactForm/contactRoot.js" type="module"></script>
+<link rel="stylesheet" href="/css/home.css" />
+<main id="main-container" class="htmx-fade-in htmx-fade-out">
+  {{ partial "home/hero.html" . }}
+  <div class="dashed-line-lg"></div>
+  {{ partial "home/about.html" . }}
+  <div class="dashed-line-lg"></div>
+  {{ partial "home/blog.html" . }}
+  <div class="dashed-line-lg"></div>
+  {{ partial "home/projects.html" . }}
+  <div class="dashed-line-lg"></div>
+  {{ partial "home/contact.html" . }}
+</main>
+{{ end }}

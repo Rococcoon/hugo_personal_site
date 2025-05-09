@@ -1,0 +1,29 @@
+<section>
+  <br />
+  <br />
+  <h2>BLOG</h2>
+  <br />
+  <div class="card">
+    <img />
+    <p class="card-summary">
+      A short summary or excerpt of the blog post to hook the reader.
+    </p>
+    <button>
+      <a
+        class="site-link"
+        hx-get="/blog"
+        hx-on::after-request="window.scrollTo({ top: 0, behavior: 'smooth' });"
+        hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+        hx-push-url="/blog"
+        hx-select="#main-container"
+        hx-swap="outerHTML swap:0.3s"
+        hx-target="#main-container"
+        tabindex="0"
+      >
+        Read More
+      </a>
+    </button>
+  </div>
+  <br />
+  <br />
+</section>

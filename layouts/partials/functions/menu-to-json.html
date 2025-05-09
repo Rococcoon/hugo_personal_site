@@ -1,0 +1,6 @@
+[ {{- $last := sub (len .Site.Menus.main) 1 -}} {{- range $i, $item :=
+.Site.Menus.main -}} { "name": "{{ $item.Name }}", "url": "{{ $item.URL }}",
+"children": [ {{- $childLast := sub (len $item.Children) 1 -}} {{- range $j,
+$child := $item.Children -}} { "name": "{{ $child.Name }}", "url": "{{
+$child.URL }}" }{{ if lt $j $childLast }},{{ end }} {{- end -}} ] }{{ if lt $i
+$last }},{{ end }} {{- end -}} ]

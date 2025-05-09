@@ -1,0 +1,30 @@
+# Hugo Files
+/public
+/resources
+/.hugo_build.lock
+/.hugo_cache/
+dist/
+
+# Node.js and npm
+/node_modules
+package-lock.json
+
+# Tailwind CSS
+/assets/css/tailwind.css # Or your generated CSS file
+/assets/css/tailwind.min.css # If you minify
+tailwind.config.js
+postcss.config.js
+
+# Tailwind CSS Binary (assuming it might be in the project root)
+tailwindcss
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+
+# Other
+*.log
+*.swp
+*.swo
+.vscode/
+.idea/
