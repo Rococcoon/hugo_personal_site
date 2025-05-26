@@ -219,7 +219,6 @@
     min-height: 100vh;
     overflow-x: hidden;
     transition: all 0.3s ease;
-    width: 100vw;
   }
 
   main {
@@ -230,6 +229,7 @@
     padding: 4px;
     justify-content: flex-start;
     min-height: 100vh;
+    width: 100vw;
   }
 
   footer {
@@ -274,6 +274,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: var(--p-sm);
     width: 100vw;
   }
 
@@ -411,7 +412,6 @@
 
   p {
     line-height: 1.6;
-    margin-bottom: 1.2rem;
   }
 
   pre {
@@ -519,8 +519,8 @@
     width: 450px;
     height: 450px;
     border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-    bottom: 10%;
-    left: 10%;
+    bottom: 50%;
+    left: 50%;
     animation-delay: 15s;
   }
 
