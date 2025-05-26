@@ -43,6 +43,8 @@ customElements.define(
           align-items: flex-start;
           background-color: var(--base);
           border: 3px solid var(--text);
+          box-shadow: 6px 6px 0 var(--sub);
+          outline: 3px solid var(--base);
           display: flex;
           flex-direction: column;
           gap: 20px;
