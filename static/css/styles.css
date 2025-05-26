@@ -234,19 +234,16 @@
 
   footer {
     align-items: center;
-    background-color: var(--text);
-    color: var(--base);
     display: flex;
     flex-direction: column;
     font-size: var(--text-xs);
     height: 400px;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: relative;
     width: 100vw;
   }
 
   footer a {
-    color: var(--base);
     font-size: var(--text-xs);
     text-decoration: none;
     transition: color 0.2s ease;
