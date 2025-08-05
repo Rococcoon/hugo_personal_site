@@ -1,6 +1,6 @@
 +++
 description = ""
 draft = false
-layout = "blog/single"
+layout = "blog/list"
 title = "Blog"
 +++

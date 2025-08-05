@@ -184,7 +184,7 @@ customElements.define(
         </div>
 
         <div>
-          <button type="submit">Send Message</button>
+          <button type="submit">SEND MESSAGE</button>
         </div>
       </form>
       `;

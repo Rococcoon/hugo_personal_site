@@ -1,0 +1,12 @@
+@layer page {
+  .blog-list-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl);
+    justify-content: center;
+  }
+
+  .blog-card {
+  }
+}

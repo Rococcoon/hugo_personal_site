@@ -4,4 +4,23 @@
   <h2>PROJECTS</h2>
   <br />
   <br />
+  <div class="flex-col">
+    <button>
+      <a
+        class="site-link"
+        hx-get="/blog"
+        hx-on::after-request="window.scrollTo({ top: 0, behavior: 'smooth' });"
+        hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+        hx-push-url="/blog"
+        hx-select="#main-container"
+        hx-swap="outerHTML swap:0.3s"
+        hx-target="#main-container"
+        tabindex="0"
+      >
+        VIEW MORE
+      </a>
+    </button>
+  </div>
+  <br />
+  <br />
 </section>

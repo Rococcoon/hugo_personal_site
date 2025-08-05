@@ -30,7 +30,6 @@ class HamburgerNav extends HTMLElement {
         }
       });
     });
-    console.log("htmx is:", htmx); // Make sure it's defined
     htmx.process(this);
   }
 
