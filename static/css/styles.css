@@ -422,6 +422,7 @@
 
   ul,
   ol {
+    width: 100%;
   }
 
   li {
@@ -587,6 +588,30 @@
 
   header .menu-container {
     display: flex;
+  }
+
+  .project-card {
+    align-items: center;
+    background-color: var(--base);
+    border: 3px solid var(--text);
+    box-shadow: 6px 6px 0 var(--sub);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--text-xl);
+    font-family: var(--font-title);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    justify-content: center;
+    outline: 3px solid var(--base);
+    padding: var(--p-xs) var(--p-xs);
+    transition:
+      transform 0.2s ease-out,
+      box-shadow 0.2s ease-out,
+      outline 1s ease-out,
+      position 1s ease-out,
+      background-color 1s ease-out;
   }
 
   @media (width > 640px) {

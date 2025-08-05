@@ -1,11 +1,11 @@
 +++
-title = "POST 01 TEST TEST TEST"
+title = "POST 02 TEST TEST TEST"
 date = 2025-05-03
 draft = false
 tags = ["Web Components", "JavaScript", "Frontend"]
 
-summary = "This is a breif summary of post 01 for the card"
+summary = "This is a breif summary of post 02 for the card"
 cardimg = "/images/blog/post_01.jpg"
 +++
 
-## Hello from post 01
+Hello from post 2
