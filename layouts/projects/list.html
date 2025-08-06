@@ -1,5 +1,23 @@
 {{ define "main" }}
 <main id="main-container" class="htmx-fade-in htmx-fade-out">
-  <section></section>
+  <link rel="stylesheet" href="/css/projects.css" />
+  <section class="projects-list-section">
+    <h1>{{ .Title }}</h1>
+    {{ if .Pages }}
+    <ul class="projects-ul">
+      {{ range .Pages }}
+      <div class="projects-card">
+        <li>
+          <a href="{{ .RelPermalink }}"> {{ .Title }} </a>
+          <p>{{ .Summary }}</p>
+          <img src="{{ .Params.cardimg }}" />
+        </li>
+      </div>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <p>No content found.</p>
+    {{ end }}
+  </section>
 </main>
 {{ end }}
