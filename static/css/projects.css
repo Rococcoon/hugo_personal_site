@@ -1,0 +1,31 @@
+@layer page {
+  .projects-list-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl);
+    justify-content: center;
+  }
+
+  .projects-ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3xl);
+    justify-content: center;
+  }
+
+  .projects-card {
+    color: var(--base);
+    background-color: var(--text);
+  }
+
+  .projects-card a {
+    color: var(--base);
+  }
+
+  .projects-card img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
