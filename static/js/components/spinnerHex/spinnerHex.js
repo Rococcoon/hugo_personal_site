@@ -331,36 +331,36 @@ const spinnerHexStyles = `
     background: var(--accent);
   }
 }
-`
+`;
 
 class HexSpinner extends HTMLElement {
   constructor() {
     super();
 
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
 
-    const socket = document.createElement('div');
-    socket.classList.add('socket');
+    const socket = document.createElement("div");
+    socket.classList.add("socket");
 
     for (let i = 0; i <= 37; i++) {
-      const gel = document.createElement('div');
-      gel.classList.add('gel');
+      const gel = document.createElement("div");
+      gel.classList.add("gel");
       if (i === 0) {
-        gel.classList.add('center-gel');
+        gel.classList.add("center-gel");
       } else {
         gel.classList.add(`c${i}`);
         if (i <= 6) {
-          gel.classList.add('r1');
+          gel.classList.add("r1");
         } else if (i <= 18) {
-          gel.classList.add('r2');
+          gel.classList.add("r2");
         } else {
-          gel.classList.add('r3');
+          gel.classList.add("r3");
         }
       }
 
       for (let j = 1; j <= 3; j++) {
-        const hexBrick = document.createElement('div');
-        hexBrick.classList.add('hex-brick');
+        const hexBrick = document.createElement("div");
+        hexBrick.classList.add("hex-brick");
         hexBrick.classList.add(`h${j}`);
         gel.appendChild(hexBrick);
       }
@@ -369,12 +369,12 @@ class HexSpinner extends HTMLElement {
 
     this.shadowRoot.appendChild(socket);
 
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.innerHTML = `
       ${spinnerHexStyles}
-    `
+    `;
     this.shadowRoot.appendChild(style); // You'll add your CSS here
   }
 }
 
-customElements.define('hex-spinner', HexSpinner);
+customElements.define("hex-spinner", HexSpinner);
