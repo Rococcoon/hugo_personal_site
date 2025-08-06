@@ -7,6 +7,25 @@
     justify-content: center;
   }
 
+  .blog-ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3xl);
+    justify-content: center;
+  }
+
   .blog-card {
+    color: var(--base);
+    background-color: var(--text);
+  }
+
+  .blog-card a {
+    color: var(--base);
+  }
+
+  .blog-card img {
+    width: 100%;
+    max-width: 100%;
   }
 }
