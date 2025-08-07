@@ -11,7 +11,9 @@
           <li class="flex-col">
             <h2>{{ .Title }}</h2>
             <p>{{ .Summary }}</p>
-            <img src="{{ .Params.cardimg }}" />
+            {{ $image := .Resources.GetMatch "cardimg" }} {{ if $image }}
+            <img src="{{ $image.RelPermalink }}" alt="{{ .Title }} image" />
+            {{ end }}
           </li>
         </div>
       </a>

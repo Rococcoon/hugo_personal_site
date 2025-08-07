@@ -8,7 +8,7 @@
     <button>
       <a
         class="site-link"
-        hx-get="/blog"
+        hx-get="/projects"
         hx-on::after-request="window.scrollTo({ top: 0, behavior: 'smooth' });"
         hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
         hx-push-url="/blog"
