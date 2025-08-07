@@ -174,36 +174,36 @@
     --gap-6xl: 10rem;
   }
 
-  @font-face {
-    font-family: "saira";
-    src: url("../fonts/SairaStencilOne/SairaStencilOne-Regular.ttf")
-      format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "jersey10";
-    src: url("../fonts/Jersey10/Jersey10-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "jersey25";
-    src: url("../fonts/Jersey25/Jersey25-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+  /*@font-face {*/
+  /*  font-family: "saira";*/
+  /*  src: url("../fonts/SairaStencilOne/SairaStencilOne-Regular.ttf")*/
+  /*    format("truetype");*/
+  /*  font-weight: normal;*/
+  /*  font-style: normal;*/
+  /*  font-display: swap;*/
+  /*}*/
+  /**/
+  /*@font-face {*/
+  /*  font-family: "jersey10";*/
+  /*  src: url("../fonts/Jersey10/Jersey10-Regular.ttf") format("truetype");*/
+  /*  font-weight: normal;*/
+  /*  font-style: normal;*/
+  /*  font-display: swap;*/
+  /*}*/
+  /**/
+  /*@font-face {*/
+  /*  font-family: "jersey25";*/
+  /*  src: url("../fonts/Jersey25/Jersey25-Regular.ttf") format("truetype");*/
+  /*  font-weight: normal;*/
+  /*  font-style: normal;*/
+  /*  font-display: swap;*/
+  /*}*/
 }
 
 @layer base {
   :root {
-    --font-main: "jeser25", "Ubuntu", "Segoe UI";
-    --font-title: "jersey10", mono;
+    --font-main: "Courier New";
+    --font-title: "Garamond";
   }
 
   html {
@@ -227,7 +227,7 @@
     box-sizing: border-box;
     color: var(--text);
     font-family: var(--font-main), mono;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     min-height: 100vh;
     overflow-x: hidden;
@@ -239,10 +239,31 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 4px;
+    padding: var(--p-sm);
+    padding-top: var(--p-5xl);
     justify-content: flex-start;
     min-height: 100vh;
     width: 100%;
+
+    @media (width > 640px) {
+      padding: var(--p-4xl);
+    }
+
+    @media (width > 768px) {
+      padding: var(--p-4xl);
+    }
+
+    @media (width > 1024px) {
+      padding: var(--p-6xl);
+    }
+
+    @media (width > 1024px) {
+      padding: var(--p-6xl);
+    }
+
+    @media (width > 1536px) {
+      padding: var(--p-6xl);
+    }
   }
 
   footer {
@@ -276,10 +297,14 @@
     justify-content: space-between;
     left: 0;
     padding: 8px 20px 8px 10px;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
     z-index: 9997;
+
+    @media (width > 640px) {
+      padding-right: var(--p-lg);
+    }
   }
 
   section {
@@ -377,7 +402,6 @@
     font-size: var(--text-xl);
     font-family: var(--font-title);
     font-weight: bold;
-    letter-spacing: 0.1rem;
     justify-content: center;
     outline: 3px solid var(--base);
     padding: var(--p-xs) var(--p-xs);
@@ -452,40 +476,6 @@
 
   hr {
     width: 90%;
-  }
-
-  @media (width > 640px) {
-    header {
-      padding-right: var(--p-lg);
-    }
-
-    main {
-      padding: var(--p-2xl);
-    }
-  }
-
-  @media (width > 768px) {
-    main {
-      padding: var(--p-4xl);
-    }
-  }
-
-  @media (width > 1024px) {
-    main {
-      padding: var(--p-6xl);
-    }
-  }
-
-  @media (width > 1024px) {
-    main {
-      padding: var(--p-6xl);
-    }
-  }
-
-  @media (width > 1536px) {
-    main {
-      padding: var(--p-6xl);
-    }
   }
 }
 
@@ -575,8 +565,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: var(--font-title);
-    font-size: var(--text-2xl);
-    letter-spacing: 0.2rem;
+    font-size: var(--text-lg);
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -607,59 +596,27 @@
 
   .site-nav-container {
     display: none;
-  }
 
-  header .menu-container {
-    display: flex;
-  }
-
-  .project-card {
-    align-items: center;
-    background-color: var(--base);
-    border: 3px solid var(--text);
-    box-shadow: 6px 6px 0 var(--sub);
-    color: var(--text);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: var(--text-xl);
-    font-family: var(--font-title);
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    justify-content: center;
-    outline: 3px solid var(--base);
-    padding: var(--p-xs) var(--p-xs);
-    transition:
-      transform 0.2s ease-out,
-      box-shadow 0.2s ease-out,
-      outline 1s ease-out,
-      position 1s ease-out,
-      background-color 1s ease-out;
-  }
-
-  @media (width > 640px) {
-    .site-nav-container {
+    @media (width > 640px) {
       align-items: center;
       display: flex;
       gap: var(--gap-xl);
       justify-content: center;
     }
+  }
 
-    header .menu-container {
+  header .menu-container {
+    display: flex;
+
+    @media (width > 640px) {
       display: none;
     }
   }
 
-  @media (width > 768px) {
+  .tag-list {
   }
 
-  @media (width > 1024px) {
-  }
-
-  @media (width > 1024px) {
-  }
-
-  @media (width > 1536px) {
+  .tag {
   }
 }
 

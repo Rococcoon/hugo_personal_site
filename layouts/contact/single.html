@@ -1,5 +1,16 @@
 {{ define "main" }}
 <main id="main-container" class="htmx-fade-in htmx-fade-out">
-  <article>{{ .Content }}</article>
+  <script
+    src="/js/components/contactForm/contactRoot.js"
+    type="module"
+  ></script>
+  <section>
+    {{ .Content }}
+    <br />
+    <br />
+    <br />
+    <br />
+    <contact-form></contact-form>
+  </section>
 </main>
 {{ end }}
