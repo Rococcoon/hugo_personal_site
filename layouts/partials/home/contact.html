@@ -4,7 +4,24 @@
   <h2>CONTACT</h2>
   <br />
   <br />
-  <contact-form></contact-form>
+  <p>Let's get in touch.</p>
+  <p></p>
+  <p></p>
   <br />
   <br />
+  <button>
+    <a
+      class="site-link"
+      hx-get="/contact"
+      hx-on::after-request="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-on:keydown="if (event.key === 'Enter') {htmx.trigger(this, 'click'); window.scrollTo({ top: 0, behavior: 'smooth' });}"
+      hx-push-url="/blog"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.3s"
+      hx-target="#main-container"
+      tabindex="0"
+    >
+      LET'S CHAT
+    </a>
+  </button>
 </section>

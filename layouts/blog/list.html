@@ -9,10 +9,17 @@
       <a href="{{ .RelPermalink }}">
         <div class="blog-card">
           <li class="flex-col">
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Summary }}</p>
             {{ $image := .Resources.GetMatch "cardimg" }} {{ if $image }}
             <img src="{{ $image.RelPermalink }}" alt="{{ .Title }} image" />
+            {{ end }}
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Summary }}</p>
+            {{ with .Page.Params.tags }}
+            <ul class="tags-list flex-row">
+              {{ range . }}
+              <li><p>{{ . }}</p></li>
+              {{ end }}
+            </ul>
             {{ end }}
           </li>
         </div>
