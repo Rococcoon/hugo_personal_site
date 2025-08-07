@@ -6,13 +6,15 @@
     {{ if .Pages }}
     <ul class="blog-ul">
       {{ range .Pages }}
-      <div class="blog-card">
-        <li>
-          <a href="{{ .RelPermalink }}"> {{ .Title }} </a>
-          <p>{{ .Summary }}</p>
-          <img src="{{ .Params.cardimg }}" />
-        </li>
-      </div>
+      <a href="{{ .RelPermalink }}">
+        <div class="blog-card">
+          <li class="flex-col">
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Summary }}</p>
+            <img src="{{ .Params.cardimg }}" />
+          </li>
+        </div>
+      </a>
       {{ end }}
     </ul>
     {{ else }}
