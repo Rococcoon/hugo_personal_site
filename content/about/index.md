@@ -5,10 +5,9 @@ layout = "about/single"
 title = "About Me :)"
 +++
 
-# Lukas Myhal
+# Rococcoon
 
 **Email:** lmyhal47@gmail.com | **Phone:** (419) 996-1913 | **Address:** Victoria, BC
-**LinkedIn:** [linkedin.com/in/lukas-myhal-999949292](https://www.linkedin.com/in/lukas-myhal-999949292) 
 | **GitHub:** [github.com/Rococcoon](https://github.com/Rococcoon) 
 | **Portfolio:** [rococcoon.xyz](http://rococcoon.xyz)
 

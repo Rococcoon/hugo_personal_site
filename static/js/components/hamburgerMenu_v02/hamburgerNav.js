@@ -219,6 +219,7 @@ class HamburgerNav extends HTMLElement {
 
         .hm-nav-link {
           color: inherit;
+          cursor: pointer;
           display: inline-block;
           font-family: var(--font-title); 
           font-size: var(--text-3xl);
