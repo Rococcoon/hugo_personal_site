@@ -1,5 +1,19 @@
 {{ define "main" }}
 <main id="main-container" class="htmx-fade-in htmx-fade-out">
-  <article>{{ .Content }}</article>
+  <article>
+    {{ .Content }} {{ if .Params.github_live_url }}
+    <button>
+      <a hx-boost="false" href="{{ .Params.github_live_url }}" target="_blank">
+        View It Live
+      </a>
+    </button>
+    {{ end }} {{ if .Params.github_url }}
+    <button>
+      <a hx-boost="false" href="{{ .Params.github_url }}" target="_blank">
+        View The Code
+      </a>
+    </button>
+    {{ end }}
+  </article>
 </main>
 {{ end }}

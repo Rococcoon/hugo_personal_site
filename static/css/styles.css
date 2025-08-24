@@ -320,7 +320,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: var(--gap-xl);
     justify-content: flex-start;
+    padding: var(--p-lg) var(--p-none);
   }
 
   nav {
