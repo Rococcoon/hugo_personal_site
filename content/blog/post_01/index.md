@@ -1,5 +1,5 @@
 +++
-title = "POST 01 TEST TEST TEST"
+title = "Post 01 Test"
 date = 2025-05-03
 draft = false
 tags = ["Web Components", "JavaScript", "Frontend"]

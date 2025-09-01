@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main id="main-container" class="htmx-fade-in htmx-fade-out">
+  <article>
+    {{ .Content }}
+    <ul>
+      {{ range .Params.externalLinks }}
+      <li>
+        <div class="flex-row">
+          <p>{{ .note }}:</p>
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+            {{ .text }}
+          </a>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </article>
+</main>
+{{ end }}
