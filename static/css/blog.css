@@ -26,6 +26,7 @@
     font-size: var(--text-md);
     font-family: var(--font-title);
     font-weight: bold;
+    gap: var(--gap-md);
     justify-content: center;
     max-width: 500px;
     outline: 3px solid var(--base);

@@ -6,22 +6,20 @@
     {{ if .Pages }}
     <ul class="blog-ul">
       {{ range .Pages }}
-      <a href="{{ .RelPermalink }}">
-        <div class="blog-card">
-          <li class="flex-col">
-            {{ $image := .Resources.GetMatch "cardimg" }} {{ if $image }}
-            <img src="{{ $image.RelPermalink }}" alt="{{ .Title }} image" />
+      <a href="{{ .RelPermalink }}" style="text-decoration: none">
+        <div class="blog-card flex-col">
+          <h2>{{ .Title }}</h2>
+          {{ $image := .Resources.GetMatch "cardimg" }} {{ if $image }}
+          <img src="{{ $image.RelPermalink }}" alt="{{ .Title }} image" />
+          {{ end }}
+          <p>{{ .Summary }}</p>
+          {{ with .Page.Params.tags }}
+          <ul class="tag-list flex-row">
+            {{ range . }}
+            <li><p class="tag">{{ . }}</p></li>
             {{ end }}
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Summary }}</p>
-            {{ with .Page.Params.tags }}
-            <ul class="tags-list flex-row">
-              {{ range . }}
-              <li><p>{{ . }}</p></li>
-              {{ end }}
-            </ul>
-            {{ end }}
-          </li>
+          </ul>
+          {{ end }}
         </div>
       </a>
       {{ end }}

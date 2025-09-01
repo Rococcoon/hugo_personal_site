@@ -2,6 +2,11 @@ baseURL = 'https://rococcoon.xyz'
 languageCode = 'en-us'
 title = "ROCOCCOON"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      linkify = false
+
 # Main navigation links
 [[menu.main]]
   name = "Home"

@@ -1,5 +1,62 @@
 <footer class="">
   <div class="dashed-line-lg"></div>
+  <nav class="flex-col">
+    <a
+      class=""
+      hx-get="/"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-push-url="/"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.2s"
+      hx-target="#main-container"
+    >
+      HOME
+    </a>
+    <a
+      class=""
+      hx-get="/about"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-push-url="/about"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.2s"
+      hx-target="#main-container"
+    >
+      ABOUT
+    </a>
+    <a
+      class=""
+      hx-get="/blog"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-push-url="/blog"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.2s"
+      hx-target="#main-container"
+    >
+      BLOG
+    </a>
+    <a
+      class=""
+      hx-get="/projects"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-push-url="/projects"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.2s"
+      hx-target="#main-container"
+    >
+      PROJECTS
+    </a>
+    <a
+      class=""
+      hx-get="/contact"
+      hx-on:click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      hx-push-url="/contact"
+      hx-select="#main-container"
+      hx-swap="outerHTML swap:0.2s"
+      hx-target="#main-container"
+    >
+      CONTACT
+    </a>
+  </nav>
   <div class="flex-col">
     <nav class="flex-row">
       <a
@@ -47,6 +104,6 @@
         Credits
       </a>
     </nav>
-    <p class="">&copy; 2025 <strong>rococcoon</strong>. All Rights Reserved.</p>
+    <p class="">&copy; 2025 <strong>Rococcoon</strong>. All Rights Reserved.</p>
   </div>
 </footer>
