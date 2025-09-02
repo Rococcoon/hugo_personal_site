@@ -107,14 +107,12 @@ customElements.define(
         }
       </style>
       <form
-        action="/"
         class="contact-form"
         id="contact-form"
         hx-boost="false"
         name="contact"
         method="POST"
         data-netlify="true"
-        netlify-honeypot="bot-field"
         NETLIFY
       >
         <input type="hidden" name="form-name" value="contact" />
