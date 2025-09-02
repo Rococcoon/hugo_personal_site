@@ -109,6 +109,7 @@ customElements.define(
       <form
         id="contact-form"
         class="contact-form"
+        hx-boost="false"
         name="contact"
         method="POST"
         data-netlify="true"
