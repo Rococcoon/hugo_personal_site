@@ -107,8 +107,9 @@ customElements.define(
         }
       </style>
       <form
-        id="contact-form"
+        action="/"
         class="contact-form"
+        id="contact-form"
         hx-boost="false"
         name="contact"
         method="POST"
