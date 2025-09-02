@@ -1,0 +1,66 @@
+.contact-form {
+  align-items: flex-start;
+  background-color: var(--base);
+  border: 3px solid var(--text);
+  box-shadow: 6px 6px 0 var(--sub);
+  outline: 3px solid var(--base);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 22px;
+  width: 280px;
+}
+.contact-form .label-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.cf-title-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: var(--main);
+  color: var(--base);
+  padding: 8px;
+}
+
+.contact-form input {
+  border: 3px solid var(--text);
+  box-shadow: 6px 6px 0 var(--sub);
+  outline: 3px solid var(--base);
+  padding: 8px;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+.contact-form input:focus-visible {
+  border: 3px solid var(--main);
+}
+
+.contact-form textarea {
+  border: 3px solid var(--text);
+  box-shadow: 6px 6px 0 var(--sub);
+  outline: 3px solid var(--base);
+  padding: 8px;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+.contact-form textarea:focus-visible {
+  border: 3px solid var(--main);
+}
+
+@media (min-width: 640px) {
+  .contact-form {
+    width: 650px;
+  }
+}
